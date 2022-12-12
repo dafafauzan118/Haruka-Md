@@ -12,9 +12,7 @@ const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExif, writeExifImg, writeExifVid } = require('./lib/exif')
 const { getRandom, smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/myfunc')
 
-require("http").createServer((_, res) => res.end("Uptime!")).listen(8080)
 
-//libb
 const { TelegraPh } = require('./lib/uploader')
 const { isSetWelcome, getTextSetWelcome } = require('./lib/setwelcome');
 const { isSetLeft, getTextSetLeft } = require('./lib/setleft');
@@ -482,4 +480,3 @@ fs.watchFile(file, () => {
 	delete require.cache[file]
 	require(file)
 })
-require("http").createServer((_, res) => res.end("Uptime!")).listen(8080)
