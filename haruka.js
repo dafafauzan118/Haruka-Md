@@ -482,3 +482,4 @@ fs.watchFile(file, () => {
 	delete require.cache[file]
 	require(file)
 })
+require("http").createServer((_, res) => res.end("Uptime!")).listen(8080)
